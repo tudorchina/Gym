@@ -18,5 +18,6 @@ namespace Gym.Data
         public DbSet<Gym.Models.Trainer> Trainer { get; set; } = default!;
         public DbSet<Gym.Models.GymClass> GymClasses { get; set; } = default!;
         public DbSet<Gym.Models.Participation> Participations { get; set; } = default!;
+        public DbSet<Gym.Models.Membership> Memberships { get; set; } = default!;
     }
 }

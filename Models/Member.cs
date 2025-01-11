@@ -6,23 +6,25 @@ namespace Gym.Models
     {
         public int ID { get; set; }
 
-        [Required]
+
+        [RegularExpression(@"^[A-Z]+[a-z\s]*$")]
         [StringLength(60, MinimumLength = 3)]
         [Display(Name = "Full Name")]
-        public string Name { get; set; } // Numele complet
+        public string? Name { get; set; } // Numele complet
 
         [Required]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Phone]
-        public string Phone { get; set; }
+        [RegularExpression(@"^\(?([0-9]{4})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})$", ErrorMessage = "Telefonul trebuie sa fie de forma '0722-123-123' sau'0722.123.123' sau '0722 123 123'")]
 
-        [Required]
-        public string Membership { get; set; } // Basic, Premium
+        public string? Phone { get; set; }
 
-        [Required]
+        
+        public string? Membership { get; set; } // Basic, Premium
+
+        
         [DataType(DataType.Date)]
-        public DateTime RegistrationDate { get; set; }
+        public DateTime? RegistrationDate { get; set; }
     }
 }

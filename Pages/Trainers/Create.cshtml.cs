@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Gym.Data;
 using Gym.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gym.Pages.Trainers
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : PageModel
     {
         private readonly Gym.Data.GymContext _context;

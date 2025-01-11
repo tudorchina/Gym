@@ -1,10 +1,31 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Acasă";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron text-center">
+    <h1 class="display-4">Transformă-ți viața la TheGym!</h1>
+    <p class="lead">Descoperă cea mai modernă sală de fitness, cu antrenamente personalizate și echipamente de top.</p>
+    <hr class="my-4">
+    <p>Începe astăzi călătoria către o versiune mai sănătoasă a ta!</p>
+    <a class="btn btn-primary btn-lg" href="/Memberships" role="button">Vezi Abonamente</a>
+    <a class="btn btn-success btn-lg" href="/GymClasses" role="button">Clase Disponibile</a>
+</div>
+<div class="container mt-5">
+    <h2 class="text-center">De ce să alegi TheGym?</h2>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <h3>Echipamente de top</h3>
+            <p>Acces la cele mai noi echipamente de fitness.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Antrenori certificați</h3>
+            <p>Îți oferim suportul necesar pentru a-ți atinge obiectivele.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Program flexibil</h3>
+            <p>Acces oricând dorești, adaptat stilului tău de viață.</p>
+        </div>
+    </div>
 </div>
